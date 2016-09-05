@@ -1,0 +1,73 @@
+// -------------------------------------
+// Product Page
+// -------------------------------------
+.product {
+  @include responsive('padding-top', 50px, 50px, 80px);
+  @include responsive('padding-bottom', 40px, 40px, 100px);
+}
+
+.product-title-row {
+  margin-bottom : 60px;
+  text-align: left;
+  @media screen and (min-width: $screen-sm){
+    text-align: center;
+  }
+  h4 {
+    margin-top : 15px;
+  }
+}
+
+.product-image {
+  max-width     : 400px;
+  margin-bottom : 40px;
+}
+
+.product-enquire-btn {
+  margin-bottom : 30px;
+}
+
+.product-description-heading {
+  margin-top : 20px;
+}
+
+.product-download {
+  display    : inline-block;
+  margin-top : 25px;
+  img {
+    margin-right   : 10px;
+    vertical-align : bottom;
+    height         : 40px;
+  }
+}
+
+.product-features-row {
+  padding : 40px 0 40px;
+}
+
+.product-feature {
+  padding : 15px;
+}
+
+.product-feature-img {
+  display : block;
+  margin  : 0 auto;
+  width            : 67px;
+  height           : 52px;
+  &.DNA {
+    @include retinaImage1point5('../images/homepage-icons/OSPnonGMO_52.png', '../images/homepage-icons/OSPnonGMO_104.png', 67px, 52px);
+  }
+  &.Truck {
+    @include retinaImage1point5('../images/homepage-icons/OSPdeliveredpricing_52.png', '../images/homepage-icons/OSPdeliveredpricing_104.png', 67px, 52px);
+  }
+  &.Silo {
+    @include retinaImage1point5('../images/homepage-icons/OSPcustom-blend_52.png', '../images/homepage-icons/OSPcustom-blend_104.png', 67px, 52px);
+  }
+  &.Gumboots {
+    @include retinaImage1point5('../images/homepage-icons/OSPsetup_52.png', '../images/homepage-icons/OSPsetup_104.png', 67px, 52px);
+  }
+}
+
+.product-feature-text {
+  text-align : center;
+  margin-top : 15px;
+}

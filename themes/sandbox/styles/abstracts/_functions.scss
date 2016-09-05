@@ -1,0 +1,51 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+// Colors
+// --------------------------------------------------
+
+@function color($key) {
+  @if map-has-key($color, $key) {
+    @return map-get($color, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $color.";
+  @return null;
+}
+
+// Fonts sizes
+// --------------------------------------------------
+
+@function font-size($key) {
+  @if map-has-key($font-size, $key) {
+    @return map-get($font-size, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $font-size.";
+  @return null;
+}
+
+// Button colours
+// --------------------------------------------------
+
+@function btn-clr($key) {
+  @if map-has-key($btn-clr, $key) {
+    @return map-get($btn-clr, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $btn-clr.";
+  @return null;
+}
+
+// Button sizes
+// --------------------------------------------------
+
+@function btn($key) {
+  @if map-has-key($btn, $key) {
+    @return map-get($btn, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $btn.";
+  @return null;
+}

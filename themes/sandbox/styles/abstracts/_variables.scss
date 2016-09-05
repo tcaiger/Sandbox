@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+// Global Color Variables
+// --------------------------------------------------
+
+$color : (
+        red: #D7000D,
+        dark: #151515,
+        dark-grey: #363840,
+        grey: #6C7580,
+        light: #F5F5F5,
+        orange: #F7931E,
+        green: #39B54A,
+        white: #FFFFFF,
+        twitter: #00ACED,
+        facebook : #3B5998,
+        youtube: #BB0000
+);
+
+// Font sizes
+// --------------------------------------------------
+$font-size : (
+        h1: 60px,
+        h2: 34px,
+        h3: 21px,
+        h4: 16px,
+        h5: 13px,
+        p: 15px,
+        p-bold: 22px,
+        p-large: 18px
+);
+
+// Taken from bootstrap. Used with `margin`, `padding`, etc.
+$line-height-computed : floor(14px * 1.5);
+

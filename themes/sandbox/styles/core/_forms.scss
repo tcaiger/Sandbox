@@ -1,0 +1,41 @@
+//-----------------------------------------------------------------------------
+// Forms
+// Styles here override bootstrap styles.
+// For Contact form styles, see contact-page.scss
+// --------------------------------------------------
+
+.form-group {
+  position : relative;
+}
+
+.form-control {
+  border-radius : 0;
+  border        : 1px solid #CFCFCF;
+  box-shadow    : none;
+  height        : 44px;
+}
+
+select.form-control {
+  background-color : color(white);
+  border           : 1px solid #CFCFCF;
+}
+
+.form-control:focus {
+  border-color       : #CFCFCF;
+  outline            : 0;
+  -webkit-box-shadow : none;
+  box-shadow         : none;
+}
+
+// Admin page login form
+#BootstrapMemberLoginForm_LoginForm {
+  max-width : 400px;
+}
+
+form .validation-message,
+form .help-block{
+  font-size: 14px;
+  font-weight: 400;
+  margin : 0;
+  color : color(red);
+}

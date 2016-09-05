@@ -1,0 +1,144 @@
+// -----------------------------------------------------------------------------
+// Contact Page
+// -----------------------------------------------------------------------------
+
+// Contact Main Section
+// -----------------------------
+.contact-main {
+  @include responsive('margin-top', 30px, 30px, 80px);
+  @include responsive('margin-bottom', 30px, 30px, 90px);
+  hr {
+    width         : 45px;
+    border-color  : red;
+    margin-top    : 20px;
+    margin-bottom : 20px;
+    margin-left   : 0;
+  }
+  img {
+    @media screen and (min-width : $screen-sm) and (max-width : $screen-md) {
+      position : absolute;
+      bottom   : 0;
+      right    : 15px;
+    }
+  }
+}
+
+.address {
+  margin-bottom : 20px;
+  &.post {
+    margin-top : 50px;
+  }
+  &.pobox {
+    margin-bottom : 35px;
+  }
+}
+
+.address-heading {
+  letter-spacing : 1px;
+}
+
+// Sales Team Section
+// -----------------------------
+.sales-team-section {
+  @include responsive('padding-top', 30px, 30px, 120px);
+  @include responsive('padding-bottom', 30px, 30px, 120px);
+  hr {
+    width         : 45px;
+    border-color  : red;
+    margin-top    : 0px;
+    margin-bottom : 0px;
+    margin-left   : 0;
+  }
+}
+
+.sales-heading {
+  margin-bottom : 20px;
+}
+
+.sales-contact {
+  padding : 16px 0 18px;
+  p {
+    margin : 0;
+  }
+}
+
+// Contact Form
+// -----------------------------
+.contact-form {
+  margin-top : 40px;
+  @media screen and (min-width : $screen-sm) {
+    .CompositeField {
+      @include clearfix();
+      .form-group {
+        display : inline-block;
+        width   : 48%;
+        float   : left;
+        &:nth-child(even) {
+          float : right;
+        }
+      }
+    }
+  }
+  label {
+    display : none;
+  }
+  .btn.action {
+    margin-top : 5px;
+  }
+  .form-control {
+    color : #666666;
+  }
+  textarea {
+    height : 265px;
+  }
+}
+
+#BootstrapForm_ContactForm {
+  textarea::-webkit-input-placeholder, /* Chrome/Opera/Safari */
+  input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color : #666666;
+  }
+  textarea::-moz-placeholder, /* Firefox 19+ */
+  input::-moz-placeholder { /* Firefox 19+ */
+    color : #666666;
+  }
+  textarea:-ms-input-placeholder, /* IE 10+ */
+  input:-ms-input-placeholder { /* IE 10+ */
+    color : #666666;
+  }
+  textarea:-moz-placeholder, /* Firefox 18- */
+  input:-moz-placeholder { /* Firefox 18- */
+    color : #666666;
+  }
+  .dropdown{
+    text-indent :6px;
+  }
+  #NoCaptcha{
+    max-width: 300px;
+    @media screen and (min-width: 600px){
+      position : absolute;
+      right: 15px;
+    }
+    @media screen and (max-width: 500px){
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+      -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      transform-origin: 0 0;
+    }
+  }
+  .form-actions{
+    @media screen and (min-width: 600px){
+      margin-top :10px;
+    }
+  }
+  #BootstrapForm_ContactForm_HiddenCaptcha-error{
+    @media screen and (min-width: 600px){
+      position : absolute;
+      right: 15px;
+      bottom :-40px;
+    }
+  }
+}
+

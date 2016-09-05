@@ -1,0 +1,25 @@
+{
+	"name": "Sandbox",
+	"description": "Sandbox composer.json",
+	"require": {
+		"php": ">=5.3.3",
+		"silverstripe/cms": "3.3.0",
+		"silverstripe/framework": "3.3.*",
+		"silverstripe/reports": "3.3.*",
+		"silverstripe/siteconfig": "3.3.*",
+		"guzzlehttp/guzzle": "~6.0"
+	},
+	"require-dev": {
+
+	},
+	"extra": {
+		"branch-alias": {
+			"3.x-dev": "3.4.x-dev"
+		}
+	},
+	"config": {
+		"process-timeout": 600
+	},
+	"prefer-stable": true,
+	"minimum-stability": "dev"
+}

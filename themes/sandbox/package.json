@@ -1,0 +1,19 @@
+{
+  "name": "OnfireDigital",
+  "version": "0.0.1",
+  "author": "Nathan",
+  "contact": "nathan@weareonfire.co.nz",
+  "description": "Package file for Onfire Digital Project",
+  "repository": {},
+  "dependencies": {
+    "time-grunt": "*",
+    "grunt-autoprefixer": "*",
+    "grunt-contrib-cssmin": "*"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-sass": "*",
+    "grunt-contrib-watch": "*",
+    "load-grunt-tasks": "*"
+  }
+}

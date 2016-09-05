@@ -1,0 +1,102 @@
+// -----------------------------------------------------------------------------
+// Basic styles that are used site wide.
+// -----------------------------------------------------------------------------
+
+html {
+  box-sizing             : border-box;
+  -webkit-font-smoothing : antialiased;
+  height                 : 100%;
+  background             : color(light);
+
+}
+
+body {
+  color            : color(dark-grey);
+  background-color : color(white);
+}
+
+// Background Colors
+// -------------------------
+.background-dark {
+  background : color(dark) !important;
+}
+
+.background-light {
+  background : color(light) !important;
+}
+
+// Hovers
+// -------------------------
+.hover-background {
+
+  transition : all 200ms ease-out; // @todo change this from being all.
+  position   : relative;
+  display    : inline-block;
+
+  &:before {
+    content          : '';
+    display          : block;
+    position         : absolute;
+    z-index          : 10;
+    left             : 0;
+    right            : 0;
+    top              : 0;
+    bottom           : 0;
+
+    background-color : #FFFFFF;
+    opacity          : 0;
+    transition       : opacity 400ms ease-out;
+  }
+  &:hover {
+    cursor : pointer;
+    &:before {
+      opacity : 0.2;
+    }
+  }
+}
+
+// Utility Classes
+.full-height {
+  height : 100% !important;
+}
+
+.full-width {
+  width : 100% !important;
+}
+
+.hover {
+  &.hover {
+    cursor : pointer;
+  }
+}
+
+// Divides
+.divide10 {
+  width  : 100%;
+  height : 10px;
+}
+
+.divide20 {
+  width  : 100%;
+  height : 20px;
+}
+
+.divide30 {
+  width  : 100%;
+  height : 30px;
+}
+
+.divide40 {
+  width  : 100%;
+  height : 40px;
+}
+
+.divide50 {
+  width  : 100%;
+  height : 50px;
+}
+
+.divide60 {
+  width  : 100%;
+  height : 60px;
+}

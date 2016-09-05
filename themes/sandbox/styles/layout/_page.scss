@@ -1,0 +1,9 @@
+// -----------------------------------------------------------------------------
+// Base Page Styles
+// These are used for 404 page, login etc
+// -----------------------------------------------------------------------------
+.page-main {
+  min-height : 500px;
+  @include responsive('padding-top', 30px, 30px, 80px);
+  @include responsive('padding-bottom', 30px, 30px, 80px);
+}

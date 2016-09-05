@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import 'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins',
+  // 2. Vendors
+'vendor/bootstrap',
+'vendor/hamburgers/hamburgers',
+'vendor/magnific-popup',
+  // 3. Core
+'core/base',
+'core/fonts',
+'core/typography',
+'core/forms',
+  // 4. Layout-related sections
+'layout/page',
+'layout/header',
+'layout/footer',
+  // 5. Components
+'components/buttons',
+'components/pagination',
+  // 6. Page-specific styles
+'pages/home',
+'pages/product',
+'pages/product-holder',
+'pages/demo-farm',
+'pages/about',
+'pages/locations',
+'pages/news-page',
+'pages/testimonials',
+'pages/faq',
+'pages/news-center',
+'pages/search',
+'pages/contact',
+// shame
+'shame';

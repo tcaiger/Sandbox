@@ -1,0 +1,230 @@
+// -----------------------------------------------------------------------------
+// Home Page
+// -----------------------------------------------------------------------------
+
+// Home Banner Section
+// ----------------------------------------------------------------
+.home-banner-section {
+  @include responsive('height', 600px, 600px, 650px, 680px, 700px, 750px);
+  @include cover();
+  background-position : 50% 100%;
+}
+
+.home-banner-content {
+  text-align : center;
+  @include responsive('margin-top', 80px, 90px);
+}
+
+// Home Features
+// -----------------------
+.home-features {
+  margin-top    : -60px;
+  margin-bottom : 40px;
+}
+
+.home-feature {
+  margin-top : 50px;
+
+  @media screen and (max-width : $screen-sm) {
+    padding    : 10px;
+    margin-top : 0;
+    max-width  : 300px;
+    @include horizontal-align();
+  }
+}
+
+.home-feature-text {
+  margin-top : 15px;
+  display    : inline-block;
+  @media screen and (min-width : $screen-sm) {
+    display    : block;
+    text-align : center;
+  }
+}
+
+.home-feature-img {
+  display        : inline-block;
+  vertical-align : middle;
+  margin         : 0 15px 0 0;
+  width          : 67px;
+  height         : 52px;
+  @media screen and (min-width : $screen-sm) {
+    display : block;
+    margin  : 0 auto;
+
+  }
+  &.DNA {
+    @include retinaImage1point5('../images/homepage-icons/OSPnonGMO_52.png', '../images/homepage-icons/OSPnonGMO_104.png', 67px, 52px);
+  }
+  &.Truck {
+    @include retinaImage1point5('../images/homepage-icons/OSPdeliveredpricing_52.png', '../images/homepage-icons/OSPdeliveredpricing_104.png', 67px, 52px);
+  }
+  &.Silo {
+    @include retinaImage1point5('../images/homepage-icons/OSPcustom-blend_52.png', '../images/homepage-icons/OSPcustom-blend_104.png', 67px, 52px);
+  }
+  &.Gumboots {
+    @include retinaImage1point5('../images/homepage-icons/OSPsetup_52.png', '../images/homepage-icons/OSPsetup_104.png', 67px, 52px);
+  }
+}
+
+.home-products {
+  position   : relative;
+  display    : block;
+  transition : opacity 300ms ease-in-out;
+  &:hover {
+    opacity : 0.9;
+  }
+}
+
+.home-products-heading {
+  @include responsive('font-size', 24px, 32px, 32px, 32px, 36px);
+  position    : absolute;
+  top         : 50%;
+  left        : 50%;
+  transform   : translate(-50%, -50%);
+  font-weight : 800;
+  text-align  : center;
+  text-shadow : 1px 1px 5px rgba(20, 20, 20, 1);
+  margin-top  : -10px;
+}
+
+.home-products-image {
+  display : block;
+  margin  : 20px auto;
+}
+
+// Home Demo Farm Section
+// ----------------------------------------------------------------
+.home-demo-section {
+  margin-top    : 30px;
+  margin-bottom : 8px;
+
+  @media screen and (max-width : $screen-xs-max) {
+    margin-bottom : 15px;
+  }
+}
+
+.home-demo-box {
+  @include cover();
+  position : relative;
+  height   : 420px;
+}
+
+.home-demo-content {
+  max-width : 400px;
+  @include responsive('padding-top', 30px);
+  @include responsive('padding-bottom', 30px);
+  @include responsive('padding-left', 20px, 20px, 45px);
+  @include responsive('padding-right', 20px, 20px, 45px);
+}
+
+.home-demo-link {
+  position : absolute;
+  bottom   : 40px;
+  left     : 45px;
+}
+
+// Home About Section
+// ----------------------------------------------------------------
+.home-about-section {
+  .divide {
+    position    : relative;
+    top         : -1px;
+    margin      : 0 20px;
+    font-weight : 200;
+  }
+}
+
+.widen {
+  margin-left  : -30px;
+  margin-right : -30px;
+}
+
+.home-about-col8 {
+  @include responsive('padding-right', 15px, 15px, 15px, 4px);
+  margin-bottom : 8px;
+  @media screen and (max-width : $screen-xs-max) {
+    padding       : 0;
+    margin-bottom : 15px;
+  }
+}
+
+.home-about-col4 {
+  @include responsive('padding-left', 15px, 15px, 15px, 4px);
+  margin-bottom : 8px;
+}
+
+.home-about-box1 {
+  @include cover();
+  position : relative;
+  height   : 385px;
+  @include responsive('padding-top', 30px);
+  @include responsive('padding-bottom', 30px);
+  @include responsive('padding-left', 20px, 20px, 45px);
+  @include responsive('padding-right', 20px, 20px, 45px);
+}
+
+.home-about-content {
+  max-width : 600px;
+}
+
+.home-about-links {
+  position : absolute;
+  bottom   : 40px;
+  color    : color(white);
+  a {
+    &:hover {
+      //color : color(red); @todo confirm this is the correct style option
+    }
+  }
+}
+
+.home-about-box2 {
+  @include cover();
+  height : 385px;
+}
+
+// Home News Section
+// ----------------------------------------------------------------
+.home-news-section {
+  margin-top    : 30px;
+  margin-bottom : 30px;
+  @media screen and (min-width : $screen-sm) {
+    margin-top    : 40px;
+    margin-bottom : 40px;
+  }
+  @media screen and (min-width : $screen-md) {
+    margin-top    : 60px;
+    margin-bottom : 50px;
+  }
+  @media screen and (min-width : $screen-lg) {
+    margin-top    : 80px;
+    margin-bottom : 80px;
+  }
+}
+
+.home-news-item {
+  margin-bottom : 40px;
+  //padding-right : 30px;
+}
+
+.home-news-section-heading {
+  margin-bottom : 20px;
+}
+
+.home-news-date {
+  font-size      : 13px;
+  text-transform : uppercase;
+}
+
+.home-news-link {
+  font-weight    : 500;
+  letter-spacing : 1px;
+}
+
+// Home Bottom Banner
+// ----------------------------------------------------------------
+.home-bottom-banner {
+  height : 380px;
+  @include cover();
+}

@@ -1,0 +1,111 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// Cover
+// --------------------------------------------------
+@mixin cover() {
+  background-repeat   : no-repeat;
+  background-size     : cover;
+  background-position : center;
+}
+
+// Contain
+// --------------------------------------------------
+@mixin contain() {
+  background-repeat   : no-repeat;
+  background-size     : contain;
+  background-position : center;
+
+}
+
+// Align
+// --------------------------------------------------
+@mixin vertical-align($position: relative) {
+  position  : $position;
+  top       : 50%;
+  transform : translateY(-50%);
+}
+
+@mixin horizontal-align($position: relative) {
+  position  : $position;
+  left      : 50%;
+  transform : translateX(-50%);
+}
+
+// Retina
+// --------------------------------------------------
+@mixin retinaImage1point5($imageLocation, $twoXImageLocation, $width, $height) {
+  background-image  : url($imageLocation);
+  background-repeat : no-repeat;
+
+  @media only screen and (-webkit-min-device-pixel-ratio : 1.5),
+  only screen and (min--moz-device-pixel-ratio : 1.5),
+  only screen and (-o-min-device-pixel-ratio : 2/1),
+  only screen and (min-device-pixel-ratio : 1.5),
+  only screen and (min-resolution : 192dpi),
+  only screen and (min-resolution : 2dppx) {
+    background-image : url($twoXImageLocation) !important;
+    background-size  : $width $height;
+  }
+}
+
+// Generic responsive Mixin
+// --------------------------------------------------
+@mixin responsive($attr, $xs: null, $sm: null, $md: null, $lg: null, $xl: null, $xxl: null) {
+
+  #{$attr}: $xs;
+
+  @if $sm {
+    @media screen and (min-width : 480px) {
+      #{$attr}: $sm;
+    }
+  }
+  @if $md {
+    @media screen and (min-width : $screen-sm) {
+      #{$attr}: $md;
+    }
+  }
+  @if $lg {
+    @media screen and (min-width : $screen-md) {
+      #{$attr}: $lg;
+    }
+  }
+  @if $xl {
+    @media screen and (min-width : $screen-lg) {
+      #{$attr}: $xl;
+    }
+  }
+  @if $xxl {
+    @media screen and (min-width : 1600px) {
+      #{$attr}: $xxl;
+    }
+  }
+}
+
+// Button variants
+// --------------------------------------------------
+
+@mixin button-variant($color, $background, $border, $hover-color: $color, $hover-background: darken($background, 10%), $hover-border: darken($background, 10%)) {
+
+  color            : $color;
+  background-color : $background;
+  border-color     : $border;
+
+  &:hover {
+    color            : $hover-color;
+    background-color : $hover-background;
+    border-color     : $hover-border;
+  }
+}
+
+// Button sizes
+// --------------------------------------------------
+
+@mixin button-size($pad-y, $pad-x, $font-size, $line-height, $border-radius) {
+  padding       : $pad-y $pad-x ($pad-y - 3px);
+  font-size     : $font-size;
+  line-height   : $line-height;
+  border-radius : $border-radius;
+}
+

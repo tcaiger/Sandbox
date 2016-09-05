@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// Testimonials Page
+// -----------------------------------------------------------------------------
+.testis-main {
+  @include responsive('padding-top', 40px, 40px, 80px);
+  @include responsive('padding-bottom', 40px, 40px, 80px);
+}
+
+.testis-heading {
+  margin-bottom : 60px;
+}
+
+.testimonial {
+  margin-bottom : 40px;
+}
