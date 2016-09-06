@@ -5,6 +5,10 @@
                 <h1 class="page-heading text-brand">$Title</h1>
                 $Content
                 $Form
+                <h3>Zomato API Categories</h3>
+                <% loop $ZomatoMenu %>
+                    <p>Name: $Name</p>
+                <% end_loop %>
             </div>
         </div>
     </div>

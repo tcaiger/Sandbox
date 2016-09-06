@@ -36,4 +36,25 @@ class Page_Controller extends ContentController {
     }
 
 
+    public function ZomatoMenu(){
+        $api = new ZomatoApi;
+        $response = $api->getCategory();
+
+        $data = json_decode($response->getBody());
+        $data = $data->categories;
+
+        $list = new ArrayList;
+
+        foreach($data as $item){
+            $cat = new ArrayData(array(
+                'Id' => $item->categories->id,
+                'Name' =>  $item->categories->name
+            ));
+            $list->push($cat);
+        }
+
+        return $list;
+    }
+
+
 }

@@ -1,0 +1,15 @@
+/silverstripe-cache/
+_ss_environment.php
+/tools/phing-metadata
+/vendor/
+.idea/
+framework/
+cms/
+siteconfig/
+reports/
+themes/phab/css/main.min.css.map
+themes/phab/images/
+silverstripe.log
+silverstripe-errors.log
+themes/phab/node_modules/
+gridfieldextensions/
