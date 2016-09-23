@@ -6,30 +6,25 @@ html {
   box-sizing             : border-box;
   -webkit-font-smoothing : antialiased;
   height                 : 100%;
-  background             : color(light);
 
 }
 
 body {
-  color            : color(dark-grey);
-  background-color : color(white);
+  font-family: 'Raleway', sans-serif;
+
 }
 
 // Background Colors
 // -------------------------
-.background-dark {
-  background : color(dark) !important;
+.background-brand {
+  background : $brand!important;
 }
 
-.background-light {
-  background : color(light) !important;
-}
 
 // Hovers
 // -------------------------
 .hover-background {
 
-  transition : all 200ms ease-out; // @todo change this from being all.
   position   : relative;
   display    : inline-block;
 

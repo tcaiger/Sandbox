@@ -1,0 +1,59 @@
+// Home Page
+//-------------
+
+.hero {
+  position : relative;
+  @include cover();
+  height   : 500px;
+  &:before {
+    position         : absolute;
+    content          : '';
+    top              : 0;
+    bottom           : 0;
+    right            : 0;
+    left             : 0;
+    background-color : rgba(40, 40, 40, 0.5);
+    z-index          : 1;
+  }
+}
+
+.hero-content {
+  position  : absolute;
+  top       : 30%;
+  transform : translateY(-50%);
+  width     : 100%;
+  z-index   : 10;
+}
+
+.hero-heading {
+  text-transform : uppercase;
+  text-align     : center;
+}
+
+.hero-search {
+ @include horizontal-align();
+}
+
+.btn-group{
+
+}
+
+.button{
+  height :40px;
+  margin-bottom    : 0; // For input.btn
+  font-weight      : 400;
+  text-align       : center;
+  vertical-align   : middle;
+  touch-action     : manipulation;
+  cursor           : pointer;
+  background-image : none;
+  white-space      : nowrap;
+  border           : none;
+  letter-spacing   : 1px;
+  background       : $white;
+}
+.search-button {
+  text-align       : center;
+  border-radius    : 0px;
+  padding          : 10px 50px;
+}

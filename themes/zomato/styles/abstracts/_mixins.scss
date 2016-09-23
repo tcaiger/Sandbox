@@ -7,7 +7,7 @@
 @mixin cover() {
   background-repeat   : no-repeat;
   background-size     : cover;
-  background-position : center;
+  background-position : 0% 0%;
 }
 
 // Contain
@@ -77,7 +77,7 @@
     }
   }
   @if $xxl {
-    @media screen and (min-width : 1600px) {
+    @media screen and (min-width : 1800px) {
       #{$attr}: $xxl;
     }
   }

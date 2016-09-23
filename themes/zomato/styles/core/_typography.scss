@@ -1,88 +1,62 @@
 //-----------------------------------------------------------------------------
 // Typography
-// @author tom@weareonfire.co.nz
-// Typography system based loosely on bootstrap v3
 // --------------------------------------------------
 
 // Headings
 // -------------------------
 
-h1, h2, h3, h4, h5,
-.h1, .h2, .h3, .h4, .h5 {
-  @include foundry();
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
   line-height   : 1.2;
-  margin-top    : ($line-height-computed / 2);
-  margin-bottom : ($line-height-computed / 2);
+  font-family: 'Raleway', sans-serif;
+  color       : $black;
+  margin-top    : 0;
+  margin-bottom : 0;
 }
 
 h1, .h1 {
-  @include responsive('font-size', font-size(h1)*0.7, font-size(h1)*0.7, font-size(h1)*0.9, font-size(h1));
-  font-weight : 800;
-  color       : color(red);
+  font-size   : 60px;
+  font-weight : 700;
 }
 
 h2, .h2 {
-  @include responsive('font-size', font-size(h2)*0.8, font-size(h2));
-  color       : color(dark);
+  font-size: 36px;
   font-weight : 500;
 }
 
 h3, .h3 {
-  font-size   : font-size(h3);
+  font-size   : 24px;
   font-weight : 800;
 }
 
 h4, .h4 {
-  font-size      : font-size(h4);
+  font-size      : 18px;
   font-weight    : 700;
   text-transform : uppercase;
 }
 
-h5, .h5 {
-  font-size      : font-size(h5);
-  font-weight    : 400;
-  text-transform : uppercase;
-}
 
 // Body text
 // -------------------------
 
 p, .p {
-  @include responsive('font-size', font-size(p)*0.9, font-size(p)*0.95, font-size(p));
-  font-family : 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px;
   font-weight : 300;
-  line-height : 1.66;
-  margin      : 0 0 ($line-height-computed / 2);
+  line-height : 1.6;
+  margin      : 0;
 }
 
-p.bold-copy, .bold-copy p {
-  @include responsive('font-size', font-size(p-bold)*0.9, font-size(p-bold)*0.95, font-size(p-bold));
-  color          : color(dark);
-  font-weight    : 400;
-  line-height    : 1.42;
-  margin-top     : 0;
-  margin-bottom  : ($line-height-computed / 2);
-  letter-spacing : 1px;
-}
-
-p.large-copy, .large-copy p {
-  @include responsive('font-size', font-size(p-large)*0.9, font-size(p-large)*0.95, font-size(p-large));
-  color       : color(dark);
-  font-weight : 300;
-  line-height : 1.67;
-  margin      : 0 0 ($line-height-computed / 2);
-}
 
 a {
-  font-family : 'Roboto', sans-serif;
-  color       : color(dark);
+  color       : inherit;
+  font-family: 'Raleway', sans-serif;
   font-weight : 300;
-  line-height : 1.66;
-  margin      : 0 0 ($line-height-computed / 2);
-  transition : 300ms color ease-in-out;
+  line-height : 1.6;
+  margin      : 0;
   &:hover, &:focus {
     text-decoration : none;
-    color           : color(red);
+    color           : inherit;
   }
 }
 
@@ -123,21 +97,18 @@ a {
 // Text colors (Use of important is deliberate)
 // -------------------------
 
-.text-red {
-  color : color(red) !important;
+.text-brand {
+  color : $brand !important;
 }
 
-.text-dark {
-  color : color(dark) !important;
-}
-
-.text-grey {
-  color : color(grey) !important;
+.text-black {
+  color : $black !important;
 }
 
 .text-white {
-  color : color(white) !important;
+  color : $white !important;
 }
+
 
 // Lists
 // -------------------------
@@ -180,19 +151,16 @@ ol {
 
 // Addresses
 address {
-  @include foundry;
   font-size     : 15px;
-  margin-bottom : $line-height-computed;
+  margin-bottom : 0;
   font-style    : normal;
   line-height   : 1.5;
 }
 
 // Blockquote
 blockquote {
-  @include foundry;
   font-weight : 600;
   font-size   : 28px;
   line-height : 1.3;
   border      : none;
-  color       : color(red);
 }
